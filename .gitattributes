@@ -13,6 +13,5 @@
 Makefiles linguist-vendored
 Makevars linguist-vendored
 Makevars.win linguist-vendored
-
-# Force override for the whole src/ directory
-src/* linguist-language=C++
+ahull3D_types.h linguist-vendored
+README.md linguist-vendored
