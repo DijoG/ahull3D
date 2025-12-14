@@ -1,6 +1,6 @@
-![C++](https://img.shields.io/badge/C++-RcppArmadillo-blue?style=for-the-badge&logo=cplusplus)
+![C++](https://img.shields.io/badge/C++-RcppCGAL-blue?style=for-the-badge&logo=cplusplus)
 ![R](https://img.shields.io/badge/-%2764?style=for-the-badge&logo=r&logoColor=grey)
-![Topology](https://img.shields.io/badge/Topology-Discrete%20Morse%20Theory-blue?style=for-the-badge)
+![Topology](https://img.shields.io/badge/Topology-Alpha%20Hull%20-blue?style=for-the-badge)
 
 # ahull3D: Fast 3D Alpha Hull with Label Propagation
 
