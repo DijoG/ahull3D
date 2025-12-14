@@ -33,6 +33,8 @@ lasdff[,"treeid"] <- ifelse(lasdff[,"treeid"]==12, 5, lasdff[,"treeid"])
 # lasdfff <-as.data.frame(lasdff)
 # unique(lasdfff$treeid)
 
+dim(lasdff)
+
 ##
 # Install from GitHub
 remotes::install_github("DijoG/DiscreteMorseR")
@@ -49,9 +51,12 @@ a <- ahull3D::ahull3d(
 tictoc::toc() 
 # 24.75 secs
 
-input_truth <- attr(a, "input_truth") # should be a vector or a matrix of 1*x dimensions
-face_truth <- attr(a, "face_truth") # should be a matrix of 3*x dimensions
-table(input_truth)
+input_truth <- attr(a, "input_truth") # a vector 
+face_truth <- attr(a, "face_truth") # a matrix of 3*x dimensions
+
+
+length(input_truth) == ncol(a$vb) # should be TRUE
+dim(face_truth) == dim(a$it)  # should be TRUE TRUE
 str(face_truth)
 
 # Test

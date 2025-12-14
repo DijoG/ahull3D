@@ -1,7 +1,7 @@
 [
     {
         "file": "D://ahull3D/src/ahull3D.cpp",
-        "file_last_write": 1765706667.0,
+        "file_last_write": 1765707536.0,
         "definitions": [
             {
                 "usr": "c:@S@PointHash",
@@ -9,7 +9,7 @@
                 "parent_name": "",
                 "name": "PointHash",
                 "file": "D://ahull3D/src/ahull3D.cpp",
-                "line": 5,
+                "line": 6,
                 "column": 8,
                 "hidden": false
             },
@@ -19,7 +19,7 @@
                 "parent_name": "PointHash",
                 "name": "operator(const Point3 &)",
                 "file": "D://ahull3D/src/ahull3D.cpp",
-                "line": 6,
+                "line": 7,
                 "column": 15,
                 "hidden": false
             },
@@ -29,7 +29,7 @@
                 "parent_name": "",
                 "name": "FAS_cpp_with_labels(Rcpp::NumericMatrix, double, Rcpp::NumericVector, bool)",
                 "file": "D://ahull3D/src/ahull3D.cpp",
-                "line": 14,
+                "line": 15,
                 "column": 12,
                 "hidden": false
             }
@@ -38,7 +38,7 @@
     },
     {
         "file": "D://ahull3D/src/ahull3D_types.h",
-        "file_last_write": 1765706849.0,
+        "file_last_write": 1765707463.0,
         "definitions": [
             {
                 "usr": "c:ahull3D_types.h@60@macro@CGAL_EIGEN3_ENABLED",
@@ -56,7 +56,7 @@
                 "parent_name": "",
                 "name": "K",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 16,
+                "line": 17,
                 "column": 61,
                 "hidden": false
             },
@@ -66,7 +66,7 @@
                 "parent_name": "",
                 "name": "Point3",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 17,
+                "line": 18,
                 "column": 61,
                 "hidden": false
             },
@@ -76,7 +76,7 @@
                 "parent_name": "",
                 "name": "Vb",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 18,
+                "line": 19,
                 "column": 61,
                 "hidden": false
             },
@@ -86,7 +86,7 @@
                 "parent_name": "",
                 "name": "Cb",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 19,
+                "line": 20,
                 "column": 61,
                 "hidden": false
             },
@@ -96,7 +96,7 @@
                 "parent_name": "",
                 "name": "Tds",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 20,
+                "line": 21,
                 "column": 61,
                 "hidden": false
             },
@@ -106,7 +106,7 @@
                 "parent_name": "",
                 "name": "Delaunay",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 21,
+                "line": 22,
                 "column": 61,
                 "hidden": false
             },
@@ -116,7 +116,7 @@
                 "parent_name": "",
                 "name": "Fixed_alpha_shape_3",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 22,
+                "line": 23,
                 "column": 61,
                 "hidden": false
             },
@@ -126,7 +126,7 @@
                 "parent_name": "",
                 "name": "Facet",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 23,
+                "line": 24,
                 "column": 61,
                 "hidden": false
             },
@@ -136,7 +136,7 @@
                 "parent_name": "",
                 "name": "Cell_handle",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 24,
+                "line": 25,
                 "column": 61,
                 "hidden": false
             },
@@ -146,7 +146,7 @@
                 "parent_name": "",
                 "name": "Tetrahedron",
                 "file": "D://ahull3D/src/ahull3D_types.h",
-                "line": 25,
+                "line": 26,
                 "column": 61,
                 "hidden": false
             }
