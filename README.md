@@ -41,7 +41,7 @@ tictoc::toc()  # ~25 seconds for hulling/meshing 1214385 points
 
 # Access and check results
 input_truth <- attr(a, "input_truth")    # a vector of n vertices
-face_truth <- attr(a, "face_truth")      # a matrix of 3*n faces dimensions
+face_truth <- attr(a, "face_truth")      # a matrix of 3*n faces 
 
 
 length(input_truth) == ncol(a$vb)        # should be TRUE
