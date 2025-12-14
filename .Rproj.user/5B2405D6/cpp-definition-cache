@@ -1,0 +1,156 @@
+[
+    {
+        "file": "D://ahull3D/src/ahull3D.cpp",
+        "file_last_write": 1765706667.0,
+        "definitions": [
+            {
+                "usr": "c:@S@PointHash",
+                "kind": 3,
+                "parent_name": "",
+                "name": "PointHash",
+                "file": "D://ahull3D/src/ahull3D.cpp",
+                "line": 5,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@PointHash@F@operator()#&1I#1",
+                "kind": 7,
+                "parent_name": "PointHash",
+                "name": "operator(const Point3 &)",
+                "file": "D://ahull3D/src/ahull3D.cpp",
+                "line": 6,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@FAS_cpp_with_labels#I#d#I#b#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "FAS_cpp_with_labels(Rcpp::NumericMatrix, double, Rcpp::NumericVector, bool)",
+                "file": "D://ahull3D/src/ahull3D.cpp",
+                "line": 14,
+                "column": 12,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
+        "file": "D://ahull3D/src/ahull3D_types.h",
+        "file_last_write": 1765706849.0,
+        "definitions": [
+            {
+                "usr": "c:ahull3D_types.h@60@macro@CGAL_EIGEN3_ENABLED",
+                "kind": 9,
+                "parent_name": "",
+                "name": "CGAL_EIGEN3_ENABLED",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 4,
+                "column": 9,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@K",
+                "kind": 8,
+                "parent_name": "",
+                "name": "K",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 16,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Point3",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Point3",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 17,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Vb",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Vb",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 18,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Cb",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Cb",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 19,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Tds",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Tds",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 20,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Delaunay",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Delaunay",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 21,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Fixed_alpha_shape_3",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Fixed_alpha_shape_3",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 22,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Facet",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Facet",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 23,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Cell_handle",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Cell_handle",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 24,
+                "column": 61,
+                "hidden": false
+            },
+            {
+                "usr": "c:ahull3D_types.h@T@Tetrahedron",
+                "kind": 8,
+                "parent_name": "",
+                "name": "Tetrahedron",
+                "file": "D://ahull3D/src/ahull3D_types.h",
+                "line": 25,
+                "column": 61,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    }
+]
