@@ -1,11 +1,18 @@
+# Override GitHub language detection
 *.cpp linguist-language=C++
-*.h linguist-language=C++ 
+*.h linguist-language=C++
 *.hpp linguist-language=C++
 *.cc linguist-language=C++
 *.cxx linguist-language=C++
 
+# Mark R files
 *.R linguist-language=R
-*.Rmd linguist-language=R
+*.Rd linguist-language=R
 
-# Exclude vendor files if any
-vendor/* linguist-vendored
+# Exclude certain files from stats
+Makefiles linguist-vendored
+Makevars linguist-vendored
+Makevars.win linguist-vendored
+
+# Force override for the whole src/ directory
+src/* linguist-language=C++
