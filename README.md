@@ -37,7 +37,7 @@ a <-
   input_truth = lasdff[,4],   # "pid" column
   alpha = 0.1
   )
-tictoc::toc()  # ~25 seconds for hulling/meshing 1214385 points
+tictoc::toc()  # ~25 seconds 
 
 # Access and check results
 input_pid <- attr(a, "input_truth")    # a vector of n vertices
@@ -50,7 +50,7 @@ dim(face_pid) == dim(a$it)             # should be TRUE TRUE
 
 ## Feautures
 
-  - 🚀 Fast: 25 seconds for 130k points
+  - 🚀 Fast: 25 seconds for 1214385 points
   - 🏷️ Label propagation: Input labels → hull vertices → faces
   - 📏 Correct dimensions: input_truth matches vertices, face_truth is 3×faces
   
