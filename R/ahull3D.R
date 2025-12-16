@@ -7,9 +7,10 @@ NULL
 #' Fast 3D Alpha Hull with Label Propagation
 #' @param points Nx3 matrix of points
 #' @param alpha Alpha value
-#' @param input_truth Optional labels
+#' @param input_truth Optional labels (point id)
+#' @param volume Compute volume (default: FALSE)
 #' @export
-ahull3d <- function(points, alpha, input_truth = NULL, volume = FALSE) {
+ahull3D <- function(points, alpha, input_truth = NULL, volume = FALSE) {
   # Input validation
   stopifnot(is.matrix(points), ncol(points) == 3L)
   stopifnot(alpha >= 0)
@@ -24,8 +25,8 @@ ahull3d <- function(points, alpha, input_truth = NULL, volume = FALSE) {
   
   # Call C++ function
   result = .Call("_ahull3D_FAS_cpp_with_labels", 
-                  t(points), alpha, input_truth, volume,
-                  PACKAGE = "ahull3D")
+                 t(points), alpha, input_truth, volume,
+                 PACKAGE = "ahull3D")
   
   vertices = result$vertices
   vertex_labels = result$vertex_labels

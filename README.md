@@ -24,28 +24,28 @@ trees <- readLAS("forest.las")
 trees_filtered <- filter_poi(trees, treeid %in% c(1,2,3,4,5))
 
 # Prepare data
-lasdff <- trees_filtered@data[,c("X", "Y", "Z", "treeid")] %>%
+lasdff <- trees_filtered@data[,c("X", "Y", "Z", "pid")] %>%
   as.data.frame() %>%
   distinct(across(1:3), .keep_all = TRUE) %>%
   as.matrix()
 
-# Compute alpha hull with tree labels ("treeid" propagation)
+# Compute alpha hull with tree labels ("pid" propagation)
 tictoc::tic()
 a <- 
-  ahull3D::ahull3d(
+  ahull3D::ahull3D(
   points = lasdff[,1:3],
-  input_truth = lasdff[,4], 
+  input_truth = lasdff[,4],   # "pid" column
   alpha = 0.1
   )
 tictoc::toc()  # ~25 seconds for hulling/meshing 1214385 points
 
 # Access and check results
-input_truth <- attr(a, "input_truth")    # a vector of n vertices
-face_truth <- attr(a, "face_truth")      # a matrix of 3*n faces 
+input_pid <- attr(a, "input_truth")    # a vector of n vertices
+face_pid <- attr(a, "face_truth")      # a matrix of 3*n faces 
 
 
-length(input_truth) == ncol(a$vb)        # should be TRUE
-dim(face_truth) == dim(a$it)             # should be TRUE TRUE
+length(input_pid) == ncol(a$vb)        # should be TRUE
+dim(face_pid) == dim(a$it)             # should be TRUE TRUE
 ```
 
 ## Feautures
