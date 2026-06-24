@@ -39,6 +39,15 @@ Rcpp::List FAS_cpp_with_labels(Rcpp::NumericMatrix pts, double alpha,
   
   const int nfacets = facets.size();
   
+  // Check if any facets found
+  if (nfacets == 0) {
+    Rcpp::warning("No facets found in alpha shape");
+    return Rcpp::List::create(
+      Rcpp::Named("vertices") = Rcpp::NumericMatrix(3, 0),
+      Rcpp::Named("vertex_labels") = Rcpp::NumericVector(0)
+    );
+  }
+  
   // Output matrices - SAME FORMAT AS ORIGINAL
   Rcpp::NumericMatrix Vertices(3, 3 * nfacets);
   Rcpp::NumericVector VertexLabels(3 * nfacets);

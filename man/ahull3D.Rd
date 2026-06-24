@@ -9,12 +9,34 @@ ahull3D(points, alpha, input_truth = NULL, volume = FALSE)
 \arguments{
 \item{points}{Nx3 matrix of points}
 
-\item{alpha}{Alpha value}
+\item{alpha}{Alpha value (radius parameter)}
 
-\item{input_truth}{Optional labels (point id)}
+\item{input_truth}{Optional labels (point id) for each input point}
 
 \item{volume}{Compute volume (default: FALSE)}
 }
+\value{
+A mesh object (from rgl::tmesh3d) with attributes:
+  - input_truth: Propagated labels
+  - face_truth: Labels for each face
+  - alpha: Alpha value used
+  - volume: Volume (if requested)
+}
 \description{
-Fast 3D Alpha Hull with Label Propagation
+Computes the alpha hull (alpha shape) of a 3D point cloud with optional
+label propagation for point classification.
+}
+\examples{
+\dontrun{
+# Generate random points on a sphere
+pts <- matrix(rnorm(300), ncol = 3)
+pts <- pts / sqrt(rowSums(pts^2))
+
+# Compute alpha hull
+mesh <- ahull3D(pts, alpha = 0.5)
+
+# Visualize
+library(rgl)
+shade3d(mesh, col = "lightblue")
+}
 }
