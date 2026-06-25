@@ -1,4 +1,4 @@
-#include "ahull3d.h"
+#include "ahull3D.h"
 #include <unordered_map>
 #include <list>
 

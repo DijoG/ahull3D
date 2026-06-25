@@ -6,9 +6,22 @@
 
 Ultra-fast 3D alpha shape computation with label propagation from input points to hull vertices and faces. Optimized for tree segmentation workflows.
 
+## System Requirements
+
+This package uses **RcppCGAL** for geometric computations. RcppCGAL is automatically installed from CRAN as a dependency. No external CGAL installation is required.
+
+## Dependencies
+
+- **Required**: `Rcpp`, `RcppCGAL`, `rgl`, `Rvcg`
+- **Suggested**: `lidR`, `RANN`, `tictoc` (for examples)
+
 ## Installation
 
 ```r
+# Install from CRAN (once available)
+install.packages("ahull3D")
+
+# Development version from GitHub
 remotes::install_github("DijoG/ahull3D")
 ```
 
@@ -20,11 +33,11 @@ library(dplyr)
 library(ahull3D)
 
 # Read tree point cloud
-trees <- readLAS("forest.las")
-trees_filtered <- filter_poi(trees, treeid %in% c(1,2,3,4,5))
+laz_file <- system.file("extdata", "12trees.laz", package = "ahull3D")
+trees <- lidR::readLAS(laz_file)
 
 # Prepare data
-lasdff <- trees_filtered@data[,c("X", "Y", "Z", "pid")] %>%
+lasdff <- treesd@data[,c("X", "Y", "Z", "pid")] %>%
   as.data.frame() %>%
   distinct(across(1:3), .keep_all = TRUE) %>%
   as.matrix()
@@ -53,7 +66,6 @@ dim(face_pid) == dim(a$it)             # should be TRUE TRUE
   - 🚀 Fast: 25 seconds for 1214385 points
   - 🏷️ Label propagation: Input labels → hull vertices → faces
   - 📏 Correct dimensions: input_truth matches vertices, face_truth is 3×faces
-  
-  
+  - 🔧 RcppCGAL powered: Robust geometric computations
 
   

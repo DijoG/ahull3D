@@ -1,8 +1,7 @@
 #ifndef AHULL3D_TYPES_H
 #define AHULL3D_TYPES_H
 
-#define CGAL_EIGEN3_ENABLED 1
-
+// Use standard CGAL headers (provided by RcppCGAL)
 #include <Rcpp.h>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Delaunay_triangulation_3.h>
@@ -14,6 +13,7 @@
 #include <unordered_map>
 #include <list>
 
+// Typedefs
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_3                                          Point3;
 typedef CGAL::Fixed_alpha_shape_vertex_base_3<K>            Vb;
