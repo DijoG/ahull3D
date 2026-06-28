@@ -14,7 +14,7 @@
 #'   - volume: Volume (if requested)
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Generate random points on a sphere
 #' pts <- matrix(rnorm(300), ncol = 3)
 #' pts <- pts / sqrt(rowSums(pts^2))

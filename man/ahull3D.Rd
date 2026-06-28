@@ -27,7 +27,7 @@ Computes the alpha hull (alpha shape) of a 3D point cloud with optional
 label propagation for point classification.
 }
 \examples{
-\dontrun{
+\donttest{
 # Generate random points on a sphere
 pts <- matrix(rnorm(300), ncol = 3)
 pts <- pts / sqrt(rowSums(pts^2))
