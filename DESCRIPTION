@@ -1,7 +1,7 @@
 Package: ahull3D
 Title: Fast 3D Alpha Hull with Label Propagation
-Version: 1.0.1
-Date: 2026-06-24
+Version: 1.0.0
+Date: 2026-06-26
 Authors@R: c(
     person("Gergo", "Dioszegi", email = "dijogergo@gmail.com", 
            role = c("aut", "cre", "cph"), 
@@ -30,4 +30,3 @@ SystemRequirements: C++17
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
-
