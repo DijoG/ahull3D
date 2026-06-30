@@ -1,6 +1,17 @@
 #include "ahull3D.h"
 #include <map>
 #include <list>
+#include <limits>  
+
+struct Point3Comparator {
+  bool operator()(const Point3& a, const Point3& b) const {
+    const double eps = 1e-9;
+    if (std::abs(a.x() - b.x()) > eps) return a.x() < b.x();
+    if (std::abs(a.y() - b.y()) > eps) return a.y() < b.y();
+    if (std::abs(a.z() - b.z()) > eps) return a.z() < b.z();
+    return false; 
+  }
+};
 
 // [[Rcpp::export]]
 Rcpp::List FAS_cpp_with_labels(Rcpp::NumericMatrix pts, double alpha, 
@@ -9,7 +20,7 @@ Rcpp::List FAS_cpp_with_labels(Rcpp::NumericMatrix pts, double alpha,
   
   // Store points and build label map
   std::list<Point3> points_list;
-  std::map<Point3, double> point_to_label;
+  std::map<Point3, double, Point3Comparator> point_to_label;
   
   for(int i = 0; i < npoints; i++) {
     const Rcpp::NumericVector pt_i = pts(Rcpp::_, i);
