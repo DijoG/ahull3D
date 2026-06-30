@@ -1,15 +1,6 @@
 #include "ahull3D.h"
-#include <unordered_map>
+#include <map>
 #include <list>
-
-// Hash for Point3
-struct PointHash {
-  std::size_t operator()(const Point3& p) const {
-    return std::hash<double>()(p.x()) ^ 
-      (std::hash<double>()(p.y()) << 1) ^ 
-      (std::hash<double>()(p.z()) << 2);
-  }
-};
 
 // [[Rcpp::export]]
 Rcpp::List FAS_cpp_with_labels(Rcpp::NumericMatrix pts, double alpha, 
@@ -18,7 +9,7 @@ Rcpp::List FAS_cpp_with_labels(Rcpp::NumericMatrix pts, double alpha,
   
   // Store points and build label map
   std::list<Point3> points_list;
-  std::unordered_map<Point3, double, PointHash> point_to_label;
+  std::map<Point3, double> point_to_label;
   
   for(int i = 0; i < npoints; i++) {
     const Rcpp::NumericVector pt_i = pts(Rcpp::_, i);
